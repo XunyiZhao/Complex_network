@@ -146,4 +146,4 @@ args = parser.parse_args()
 s_model = model(datasets[args.dataset], modes)
 infect = s_model.spread(repeat = 5)
 for m,mode in enumerate(modes):
-    np.save('results/'+d+'_'+mode+'_90%.npy',infect[:,m])
+    np.save('results/'+args.dataset+'_'+mode+'_90%.npy',infect[:,m])
